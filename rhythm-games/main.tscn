@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dspd7k4q6ennb"]
 
+[ext_resource type="Script" uid="uid://dc3qwu447xhf" path="res://Highscore.gd" id="1_4c57u"]
 [ext_resource type="Script" uid="uid://dmlnx5mndiv4t" path="res://game.gd" id="1_5vw27"]
 [ext_resource type="Texture2D" uid="uid://bdmfor3n18olo" path="res://assets/sprites/arrow_up_button.png" id="1_lquwl"]
 [ext_resource type="Texture2D" uid="uid://c3jk4tq0gt2vq" path="res://assets/sprites/arrow_down_button.png" id="2_7mycd"]
@@ -8,6 +9,7 @@
 [ext_resource type="FontFile" uid="uid://duj2mbtfmuruy" path="res://assets/upheavtt.ttf" id="5_kek77"]
 [ext_resource type="PackedScene" uid="uid://xoswis7utnfa" path="res://note.tscn" id="6_7mycd"]
 [ext_resource type="Script" uid="uid://bf1vnufu7na6x" path="res://addons/midi/MidiPlayer.gd" id="7_272bh"]
+[ext_resource type="Script" uid="uid://lyqcyqhbkpc0" path="res://Score.gd" id="7_efxa6"]
 [ext_resource type="AudioStream" uid="uid://bs3aqxy3pxdy1" path="res://assets/rhythm_tut.mp3" id="9_kek77"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4c57u"]
@@ -15,6 +17,7 @@ font = ExtResource("5_kek77")
 font_size = 40
 
 [node name="Main" type="Node2D" unique_id=1407195253]
+script = ExtResource("1_4c57u")
 
 [node name="Game" type="Node2D" parent="." unique_id=2122457954]
 script = ExtResource("1_5vw27")
@@ -57,6 +60,7 @@ offset_bottom = 304.0
 texture_normal = ExtResource("4_5vw27")
 
 [node name="Score" type="Node2D" parent="Game" unique_id=1019087552]
+script = ExtResource("7_efxa6")
 
 [node name="Label" type="Label" parent="Game/Score" unique_id=157564285]
 offset_right = 183.0

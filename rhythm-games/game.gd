@@ -43,7 +43,6 @@ const NOTE_SCENE: PackedScene = preload("res://note.tscn")
 
 # Game Node 
 func _on_midi_player_midi_event(channel: Variant, event: Variant) -> void:
-	print(event.type)
 	if event.type == SMF.MIDIEventType.note_on:
 		var note_data: Dictionary = notes.get(event.note)
   
@@ -54,7 +53,6 @@ func _on_midi_player_midi_event(channel: Variant, event: Variant) -> void:
 			note.speed = NOTE_Y_OFFSET * FALLING_SPEED_SCALE
 			note.expected_time = delta_sum + TIMING_OFFSET
 			$NotesContainer.add_child(note)
-			print(event.note)
 			note_data["queue"].push_back(note)
 
 
@@ -80,7 +78,6 @@ func _check_note_hit(note_data: Dictionary) -> void:
 		var next_note: Node2D = note_data["queue"].front()
 		if next_note.test_hit(delta_sum):
 			note_data["queue"].pop_front().hit(delta_sum)
-			print("hi")
 		else:
 			Highscore.update_points(Highscore.TimingJudgement.WHAT)
 	else:

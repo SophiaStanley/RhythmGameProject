@@ -22,11 +22,10 @@ config/icon="res://icon.svg"
 [autoload]
 
 Highscore="*uid://dc3qwu447xhf"
+Combo="*uid://tin7uiwbb50p"
 
 [display]
 
-window/size/viewport_width=512
-window/size/viewport_height=756
 window/stretch/mode="canvas_items"
 window/stretch/scale=2.0
 

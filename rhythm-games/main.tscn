@@ -11,13 +11,19 @@
 [ext_resource type="Script" uid="uid://bf1vnufu7na6x" path="res://addons/midi/MidiPlayer.gd" id="7_272bh"]
 [ext_resource type="Script" uid="uid://lyqcyqhbkpc0" path="res://Score.gd" id="7_efxa6"]
 [ext_resource type="AudioStream" uid="uid://bs3aqxy3pxdy1" path="res://assets/rhythm_tut.mp3" id="9_kek77"]
+[ext_resource type="Script" uid="uid://dpb6hefkpjbcg" path="res://DisplayScore.gd" id="12_dg77c"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4c57u"]
 font = ExtResource("5_kek77")
 font_size = 40
 
+[sub_resource type="LabelSettings" id="LabelSettings_efxa6"]
+font = ExtResource("5_kek77")
+font_size = 40
+
 [node name="Main" type="Node2D" unique_id=1407195253]
 script = ExtResource("1_4c57u")
+metadata/_edit_horizontal_guides_ = [298.0]
 
 [node name="Game" type="Node2D" parent="." unique_id=2122457954]
 script = ExtResource("1_5vw27")
@@ -25,24 +31,24 @@ script = ExtResource("1_5vw27")
 [node name="Background" type="Node2D" parent="Game" unique_id=484425466]
 
 [node name="ColorRect" type="ColorRect" parent="Game/Background" unique_id=1560940584]
-offset_right = 511.0
-offset_bottom = 759.0
+offset_right = 1148.0
+offset_bottom = 655.0
 color = Color(0, 0, 0, 1)
 
 [node name="Buttons" type="Node2D" parent="Game" unique_id=593750932]
 
 [node name="UpButton" type="TextureButton" parent="Game/Buttons" unique_id=882449913]
 offset_left = 83.0
-offset_top = 267.0
+offset_top = 265.0
 offset_right = 123.0
-offset_bottom = 307.0
+offset_bottom = 305.0
 texture_normal = ExtResource("1_lquwl")
 
 [node name="DownButton" type="TextureButton" parent="Game/Buttons" unique_id=789963658]
-offset_left = 142.0
-offset_top = 268.0
-offset_right = 182.0
-offset_bottom = 308.0
+offset_left = 455.0
+offset_top = 265.0
+offset_right = 495.0
+offset_bottom = 305.0
 texture_normal = ExtResource("2_7mycd")
 
 [node name="LeftButton" type="TextureButton" parent="Game/Buttons" unique_id=980732133]
@@ -53,18 +59,20 @@ offset_bottom = 305.0
 texture_normal = ExtResource("3_272bh")
 
 [node name="RightButton" type="TextureButton" parent="Game/Buttons" unique_id=2023838857]
-offset_left = 201.0
-offset_top = 264.0
-offset_right = 241.0
-offset_bottom = 304.0
+offset_left = 527.0
+offset_top = 265.0
+offset_right = 567.0
+offset_bottom = 305.0
 texture_normal = ExtResource("4_5vw27")
 
 [node name="Score" type="Node2D" parent="Game" unique_id=1019087552]
 script = ExtResource("7_efxa6")
 
-[node name="Label" type="Label" parent="Game/Score" unique_id=157564285]
-offset_right = 183.0
-offset_bottom = 23.0
+[node name="ScoreLabel" type="Label" parent="Game/Score" unique_id=157564285]
+offset_left = 203.0
+offset_top = 4.0
+offset_right = 386.0
+offset_bottom = 40.0
 text = "123"
 label_settings = SubResource("LabelSettings_4c57u")
 horizontal_alignment = 1
@@ -81,5 +89,16 @@ metadata/_custom_type_script = "uid://bf1vnufu7na6x"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Game" unique_id=452821634]
 stream = ExtResource("9_kek77")
+
+[node name="Combo" type="Node2D" parent="Game" unique_id=165714405]
+script = ExtResource("12_dg77c")
+
+[node name="ComboLabel" type="Label" parent="Game/Combo" unique_id=5419909]
+offset_left = 218.0
+offset_top = 202.0
+offset_right = 380.0
+offset_bottom = 238.0
+text = "0 Combo"
+label_settings = SubResource("LabelSettings_efxa6")
 
 [connection signal="midi_event" from="Game/MidiPlayer" to="Game" method="_on_midi_player_midi_event"]

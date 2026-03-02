@@ -15,26 +15,26 @@ const NOTE_SCENE: PackedScene = preload("res://note.tscn")
 
 @onready var notes: Dictionary = {
 	36: {
-		"key": "ui_up",
-		"button": get_node("Buttons/UpButton"),
-		"texture": preload("res://assets/sprites/Note2.png"),
-		"queue": []
-	},
-	38: {
-		"key": "ui_down",
-		"button": get_node("Buttons/DownButton"),
-		"texture": preload("res://assets/sprites/Note3.png"),
-		"queue": []
-	},
-	40: {
-		"key": "ui_left",
-		"button": get_node("Buttons/LeftButton"),
+		"key": "Button1",
+		"button": get_node("Buttons/Button1"),
 		"texture": preload("res://assets/sprites/Note1.png"),
 		"queue": []
 	},
+	38: {
+		"key": "Button2",
+		"button": get_node("Buttons/Button2"),
+		"texture": preload("res://assets/sprites/Note2.png"),
+		"queue": []
+	},
+	40: {
+		"key": "Button3",
+		"button": get_node("Buttons/Button3"),
+		"texture": preload("res://assets/sprites/Note3.png"),
+		"queue": []
+	},
 	42: {
-		"key": "ui_right",
-		"button": get_node("Buttons/RightButton"),
+		"key": "Button4",
+		"button": get_node("Buttons/Button4"),
 		"texture": preload("res://assets/sprites/Note4.png"),
 		"queue": []
 	}

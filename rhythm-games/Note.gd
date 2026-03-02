@@ -4,9 +4,9 @@ const SCREEN_BOTTOM := 600
 var speed: float = 100.0
 var expected_time: float = 0.0 # used to track when they appear in the queue
 const TIME_TOLERANCE := {
-	"PERFECT": 0.02,
-	"GOOD": 0.05,
-	"OK": 0.08
+	"PERFECT": 0.05,
+	"GOOD": 0.08,
+	"OK": 0.12
 }
 
 func _process(delta: float) -> void:

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b3tmikisskr7h"
+path="res://.godot/imported/Sample Song.mp3-cbc4d1aa9e0dfbdc4b4de769de3496c3.mp3str"
+
+[deps]
+
+source_file="res://assets/Sample Song.mp3"
+dest_files=["res://.godot/imported/Sample Song.mp3-cbc4d1aa9e0dfbdc4b4de769de3496c3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

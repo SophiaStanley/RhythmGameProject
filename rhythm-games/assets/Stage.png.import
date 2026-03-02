@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmnxtydcxqbxv"
-path="res://.godot/imported/arrow_up_note.png-57e8488e55c8135e7aaabeda7863aa3e.ctex"
+uid="uid://bdhioieihdtx2"
+path="res://.godot/imported/Stage.png-c4469b29395f169c6299aea6c9a796a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/arrow_up_note.png"
-dest_files=["res://.godot/imported/arrow_up_note.png-57e8488e55c8135e7aaabeda7863aa3e.ctex"]
+source_file="res://assets/Stage.png"
+dest_files=["res://.godot/imported/Stage.png-c4469b29395f169c6299aea6c9a796a6.ctex"]
 
 [params]
 

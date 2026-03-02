@@ -1,5 +1,6 @@
 extends Node2D
 
+var keepCombo = false # checking if the hit keeps the combo working
 var combo = 0
 enum TimingJudgement {MISS, WHAT, OK, GOOD, PERFECT}
 
@@ -14,11 +15,16 @@ func check_combo(type: TimingJudgement):
 	match(type):
 		TimingJudgement.MISS:
 			combo = 0;
+			keepCombo = false;
 		TimingJudgement.WHAT:
 			combo = 0;
+			keepCombo = false;
 		TimingJudgement.OK:
 			combo = 0;
+			keepCombo = false;
 		TimingJudgement.GOOD:
 			combo += 1;
+			keepCombo = true;
 		TimingJudgement.PERFECT:
 			combo += 1;
+			keepCombo = true;

@@ -6,3 +6,7 @@ extends Node2D
 func _process(delta: float) -> void:
 	pass
 	$ComboLabel.text = str(Combo.combo, " Combo")
+	Combo.keepCombo = false
+	
+	if (Combo.keepCombo == true):
+		$AnimationPlayer.play("hit")

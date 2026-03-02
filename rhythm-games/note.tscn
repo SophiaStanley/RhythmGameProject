@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://xoswis7utnfa"]
 
 [ext_resource type="Script" uid="uid://cilf5xesa6qhu" path="res://Note.gd" id="1_doocs"]
-[ext_resource type="Texture2D" uid="uid://dmnxtydcxqbxv" path="res://assets/sprites/arrow_up_note.png" id="1_wn01w"]
+[ext_resource type="Texture2D" uid="uid://djmqf7rf8gxf3" path="res://assets/sprites/Note2.png" id="1_wn01w"]
 
 [node name="Sprite2D" type="Sprite2D" unique_id=2122865146]
 texture = ExtResource("1_wn01w")

@@ -6,7 +6,7 @@ extends Node2D
 var delta_sum := 0.0
 const TIMING_OFFSET := (1.0/FALLING_SPEED_SCALE)
 
-const BUTTON_SPAWN_OFFSET := Vector2(16, 16)
+const BUTTON_SPAWN_OFFSET := Vector2(32, 32)
 const NOTE_Y_OFFSET := 400
 const FALLING_SPEED_SCALE := 0.5
 # Each note in the MIDI file represents a note in the game. This dictionary is used to link them together
@@ -17,25 +17,25 @@ const NOTE_SCENE: PackedScene = preload("res://note.tscn")
 	36: {
 		"key": "ui_up",
 		"button": get_node("Buttons/UpButton"),
-		"texture": preload("res://assets/sprites/arrow_up_note.png"),
+		"texture": preload("res://assets/sprites/Note2.png"),
 		"queue": []
 	},
 	38: {
 		"key": "ui_down",
 		"button": get_node("Buttons/DownButton"),
-		"texture": preload("res://assets/sprites/arrow_down_note.png"),
+		"texture": preload("res://assets/sprites/Note3.png"),
 		"queue": []
 	},
 	40: {
 		"key": "ui_left",
 		"button": get_node("Buttons/LeftButton"),
-		"texture": preload("res://assets/sprites/arrow_left_note.png"),
+		"texture": preload("res://assets/sprites/Note1.png"),
 		"queue": []
 	},
 	42: {
 		"key": "ui_right",
 		"button": get_node("Buttons/RightButton"),
-		"texture": preload("res://assets/sprites/arrow_right_note.png"),
+		"texture": preload("res://assets/sprites/Note4.png"),
 		"queue": []
 	}
 }

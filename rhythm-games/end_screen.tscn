@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://c4r8657opkxbw"]
+
+[ext_resource type="Script" uid="uid://1v0dtfmnrsdm" path="res://end_screen.gd" id="1_abjgy"]
+[ext_resource type="FontFile" uid="uid://duj2mbtfmuruy" path="res://assets/upheavtt.ttf" id="1_my301"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_abjgy"]
+font = ExtResource("1_my301")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_xu7hh"]
+font = ExtResource("1_my301")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_pmjk2"]
+font = ExtResource("1_my301")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_d75mr"]
+font = ExtResource("1_my301")
+font_size = 40
+
+[node name="end" type="Node2D" unique_id=2146831422]
+script = ExtResource("1_abjgy")
+
+[node name="Perfects" type="Label" parent="." unique_id=1572244087]
+offset_left = 62.0
+offset_top = 69.0
+offset_right = 236.0
+offset_bottom = 105.0
+text = "perfect:"
+label_settings = SubResource("LabelSettings_abjgy")
+
+[node name="OKs" type="Label" parent="." unique_id=1438840383]
+offset_left = 63.0
+offset_top = 166.0
+offset_right = 121.0
+offset_bottom = 202.0
+text = "OK:"
+label_settings = SubResource("LabelSettings_xu7hh")
+
+[node name="Goods" type="Label" parent="." unique_id=1173958529]
+offset_left = 61.0
+offset_top = 120.0
+offset_right = 165.0
+offset_bottom = 156.0
+text = "GOOD:"
+label_settings = SubResource("LabelSettings_pmjk2")
+
+[node name="Miss" type="Label" parent="." unique_id=2056032467]
+offset_left = 64.0
+offset_top = 203.0
+offset_right = 218.0
+offset_bottom = 239.0
+text = "MISS:"
+label_settings = SubResource("LabelSettings_d75mr")
+
+[node name="RestartButton" type="Button" parent="." unique_id=903351020]
+offset_left = 19.0
+offset_top = 267.0
+offset_right = 80.0
+offset_bottom = 298.0
+text = "restart"
+
+[node name="TitleButton" type="Button" parent="." unique_id=2145815071]
+offset_left = 104.0
+offset_top = 266.0
+offset_right = 186.0
+offset_bottom = 297.0
+text = "go to title"
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="RestartButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TitleButton" to="." method="_on_title_button_pressed"]

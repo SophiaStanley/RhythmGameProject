@@ -67,4 +67,9 @@ stream = ExtResource("11_dg77c")
 
 [node name="HUD" parent="Game" unique_id=1404523958 instance=ExtResource("14_w48qg")]
 
+[node name="Timer" type="Timer" parent="." unique_id=1483539373]
+wait_time = 35.0
+autostart = true
+
 [connection signal="midi_event" from="Game/MidiPlayer" to="Game" method="_on_midi_player_midi_event"]
+[connection signal="timeout" from="Timer" to="Game" method="_on_timer_timeout"]

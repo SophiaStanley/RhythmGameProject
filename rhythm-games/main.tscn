@@ -5,58 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://bdhioieihdtx2" path="res://assets/Stage.png" id="3_dg77c"]
 [ext_resource type="Texture2D" uid="uid://d0ignvunh5kb5" path="res://assets/sprites/Button2.png" id="3_efxa6"]
 [ext_resource type="Texture2D" uid="uid://die85evv4tath" path="res://assets/sprites/Button3.png" id="4_dg77c"]
-[ext_resource type="FontFile" uid="uid://duj2mbtfmuruy" path="res://assets/upheavtt.ttf" id="5_kek77"]
 [ext_resource type="Texture2D" uid="uid://dh8i80rw440ds" path="res://assets/sprites/Button1.png" id="5_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://rm88upsyt8dq" path="res://assets/sprites/Button4.png" id="6_w48qg"]
 [ext_resource type="Script" uid="uid://bf1vnufu7na6x" path="res://addons/midi/MidiPlayer.gd" id="7_272bh"]
-[ext_resource type="Script" uid="uid://lyqcyqhbkpc0" path="res://Score.gd" id="7_efxa6"]
-[ext_resource type="AudioStream" uid="uid://b3tmikisskr7h" path="res://assets/Sample Song.mp3" id="11_dg77c"]
-[ext_resource type="Script" uid="uid://dpb6hefkpjbcg" path="res://DisplayScore.gd" id="12_dg77c"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_4c57u"]
-font = ExtResource("5_kek77")
-font_size = 40
-
-[sub_resource type="LabelSettings" id="LabelSettings_efxa6"]
-font = ExtResource("5_kek77")
-font_size = 40
-
-[sub_resource type="Animation" id="Animation_dg77c"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ComboLabel:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_ycdy4"]
-resource_name = "hit"
-length = 0.16666667
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ComboLabel:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.06666667, 0.13333334),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_w48qg"]
-_data = {
-&"RESET": SubResource("Animation_dg77c"),
-&"hit": SubResource("Animation_ycdy4")
-}
+[ext_resource type="AudioStream" uid="uid://b3tmikisskr7h" path="res://assets/music/Sample Song.mp3" id="11_dg77c"]
+[ext_resource type="PackedScene" uid="uid://ch4a6a7pfdefl" path="res://hud.tscn" id="14_w48qg"]
 
 [node name="Main" type="Node2D" unique_id=1407195253]
 script = ExtResource("1_4c57u")
@@ -102,41 +55,16 @@ offset_right = 563.0
 offset_bottom = 299.0
 texture_normal = ExtResource("6_w48qg")
 
-[node name="Score" type="Node2D" parent="Game" unique_id=1019087552]
-script = ExtResource("7_efxa6")
-
-[node name="ScoreLabel" type="Label" parent="Game/Score" unique_id=157564285]
-offset_left = 181.0
-offset_top = 3.0
-offset_right = 364.0
-offset_bottom = 39.0
-text = "123"
-label_settings = SubResource("LabelSettings_4c57u")
-horizontal_alignment = 1
-
 [node name="NotesContainer" type="Node2D" parent="Game" unique_id=1853806372]
 
 [node name="MidiPlayer" type="Node" parent="Game" unique_id=958997315]
 script = ExtResource("7_272bh")
-file = "res://assets/tutorial.mid"
+file = "res://assets/midi/tutorial.mid"
 metadata/_custom_type_script = "uid://bf1vnufu7na6x"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Game" unique_id=452821634]
 stream = ExtResource("11_dg77c")
 
-[node name="Combo" type="Node2D" parent="Game" unique_id=165714405]
-script = ExtResource("12_dg77c")
-
-[node name="ComboLabel" type="Label" parent="Game/Combo" unique_id=5419909]
-offset_left = 211.0
-offset_top = 251.0
-offset_right = 373.0
-offset_bottom = 287.0
-pivot_offset = Vector2(82, 19)
-text = "0 Combo"
-label_settings = SubResource("LabelSettings_efxa6")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Game/Combo" unique_id=1797213215]
-libraries/ = SubResource("AnimationLibrary_w48qg")
+[node name="HUD" parent="Game" unique_id=1404523958 instance=ExtResource("14_w48qg")]
 
 [connection signal="midi_event" from="Game/MidiPlayer" to="Game" method="_on_midi_player_midi_event"]

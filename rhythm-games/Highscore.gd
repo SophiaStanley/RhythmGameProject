@@ -5,7 +5,7 @@ var displayed_points = 0;
 enum TimingJudgement {MISS, WHAT, OK, GOOD, PERFECT}
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	update_displayed_points()
 	
 func update_points(type: TimingJudgement):

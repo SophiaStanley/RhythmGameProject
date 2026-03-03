@@ -2,13 +2,15 @@
 # https://medium.com/@sergejmoor01/building-a-rhythm-game-in-godot-part-1-synchronizing-gameplay-with-music-258b0bcab458
 extends Node2D
 
+var stamina := 20
+
 # the time that has passed since the game scene started. used for tracking time for syncing music
 var delta_sum := 0.0
+const FALLING_SPEED_SCALE := 0.5
 const TIMING_OFFSET := (1.0/FALLING_SPEED_SCALE)
 
 const BUTTON_SPAWN_OFFSET := Vector2(32, 32)
 const NOTE_Y_OFFSET := 400
-const FALLING_SPEED_SCALE := 0.5
 # Each note in the MIDI file represents a note in the game. This dictionary is used to link them together
 # So it should play properly.
 const NOTE_SCENE: PackedScene = preload("res://note.tscn")
@@ -42,7 +44,7 @@ const NOTE_SCENE: PackedScene = preload("res://note.tscn")
 
 
 # Game Node 
-func _on_midi_player_midi_event(channel: Variant, event: Variant) -> void:
+func _on_midi_player_midi_event(_channel: Variant, event: Variant) -> void:
 	if event.type == SMF.MIDIEventType.note_on:
 		var note_data: Dictionary = notes.get(event.note)
   
@@ -61,13 +63,18 @@ func _ready() -> void:
 	$MidiPlayer.play()
 
 func _process(delta: float) -> void:
+	$HUD.update_stamina(stamina)
+	$HUD.update_score(Highscore.displayed_points)
+	$HUD.update_combo(Combo.combo)
 	delta_sum += delta
 	_check_input()
 	_check_miss()
- 
-	if delta_sum >= TIMING_OFFSET and not $AudioStreamPlayer.playing:
+	_check_loss()
+	
+	#checking if stamina is 0 cause otherwise it keeps playing and stopping every frame after stamina reaches 0
+	if delta_sum >= TIMING_OFFSET and not $AudioStreamPlayer.playing and stamina > 0:
 		$AudioStreamPlayer.play()
- 
+
 func _check_input():
 	for note_data in notes.values():
 		if Input.is_action_just_pressed(note_data["key"]):
@@ -80,11 +87,23 @@ func _check_note_hit(note_data: Dictionary) -> void:
 			note_data["queue"].pop_front().hit(delta_sum)
 		else:
 			Highscore.update_points(Highscore.TimingJudgement.WHAT)
+			stamina -= 2
 	else:
 		Highscore.update_points(Highscore.TimingJudgement.WHAT)
+		stamina -= 2
 
 func _check_miss() -> void:
 	for note_data in notes.values():
 		if not note_data["queue"].is_empty():
 			if note_data["queue"].front().test_miss(delta_sum):
 				note_data["queue"].pop_front().miss()
+				stamina -= 2
+
+func _check_loss() -> void:
+	if stamina <= 0:
+		game_over()
+
+func game_over() -> void:
+	$AudioStreamPlayer.stop()
+	$MidiPlayer.stop()
+	print("you lost D:")

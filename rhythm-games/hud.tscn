@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://ch4a6a7pfdefl"]
+
+[ext_resource type="FontFile" uid="uid://duj2mbtfmuruy" path="res://assets/upheavtt.ttf" id="1_37p78"]
+[ext_resource type="Script" uid="uid://dauqlimg4ei6i" path="res://hud.gd" id="1_64ctp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_64ctp"]
+font = ExtResource("1_37p78")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_8sq4i"]
+font = ExtResource("1_37p78")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_640wx"]
+font = ExtResource("1_37p78")
+font_size = 40
+
+[sub_resource type="Animation" id="Animation_dg77c"]
+length = 0.26666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ycdy4"]
+resource_name = "hit"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_64ctp"]
+_data = {
+&"RESET": SubResource("Animation_dg77c"),
+&"hit": SubResource("Animation_ycdy4")
+}
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1404523958]
+script = ExtResource("1_64ctp")
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=1429446203]
+offset_left = 236.0
+offset_top = 3.0
+offset_right = 294.0
+offset_bottom = 39.0
+text = "123"
+label_settings = SubResource("LabelSettings_64ctp")
+
+[node name="StaminaLabel" type="Label" parent="." unique_id=375327475]
+offset_left = 14.0
+offset_top = 1.0
+offset_right = 62.0
+offset_bottom = 37.0
+text = "20"
+label_settings = SubResource("LabelSettings_8sq4i")
+
+[node name="ComboLabel" type="Label" parent="." unique_id=680670318]
+offset_left = 216.0
+offset_top = 253.0
+offset_right = 378.0
+offset_bottom = 289.0
+pivot_offset = Vector2(88, 21)
+text = "0 Combo"
+label_settings = SubResource("LabelSettings_640wx")
+
+[node name="ComboAnimation" type="AnimationPlayer" parent="ComboLabel" unique_id=1564611971]
+libraries/ = SubResource("AnimationLibrary_64ctp")

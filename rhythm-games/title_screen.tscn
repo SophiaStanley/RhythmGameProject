@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dfqpmejpnm5qu" path="res://assets/StartButton.png" id="3_hafda"]
 [ext_resource type="Texture2D" uid="uid://6h0hrx0jl8t0" path="res://assets/StellarStageLogo.png" id="3_ig5kc"]
 [ext_resource type="Texture2D" uid="uid://xm15wnxu8oib" path="res://assets/StellarStageLogo2.png" id="4_05l2w"]
+[ext_resource type="AudioStream" uid="uid://l8pjrt3ix0ot" path="res://assets/music/Adventure's Beginning!.mp3" id="6_tpml5"]
 
 [sub_resource type="Animation" id="Animation_hafda"]
 length = 0.001
@@ -74,5 +75,10 @@ texture = ExtResource("3_ig5kc")
 
 [node name="LogoAnimation" type="AnimationPlayer" parent="StellarStageLogo" unique_id=760156604]
 libraries/ = SubResource("AnimationLibrary_jqemp")
+
+[node name="TitleMusic" type="AudioStreamPlayer" parent="." unique_id=143053523]
+stream = ExtResource("6_tpml5")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]

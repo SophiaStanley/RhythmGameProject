@@ -1,11 +1,11 @@
 extends Node2D
 
-var keepCombo = false # checking if the hit keeps the combo working
+var keepCombo = false # checking if the hit keeps the combo working, if it does then the animation plays
 var combo = 0
 enum TimingJudgement {MISS, WHAT, OK, GOOD, PERFECT}
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 	
 	

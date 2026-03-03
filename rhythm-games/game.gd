@@ -85,6 +85,8 @@ func _check_note_hit(note_data: Dictionary) -> void:
 		var next_note: Node2D = note_data["queue"].front()
 		if next_note.test_hit(delta_sum):
 			note_data["queue"].pop_front().hit(delta_sum)
+			if Combo.combo % 10 == 0 and not Combo.combo == 0:
+				stamina +=2
 		else:
 			Highscore.update_points(Highscore.TimingJudgement.WHAT)
 			stamina -= 2

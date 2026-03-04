@@ -74,6 +74,7 @@ func _process(delta: float) -> void:
 	#checking if stamina is 0 cause otherwise it keeps playing and stopping every frame after stamina reaches 0
 	if delta_sum >= TIMING_OFFSET and not $AudioStreamPlayer.playing and stamina > 0 and $AudioStreamPlayer.is_inside_tree():
 		$AudioStreamPlayer.play()
+		stamina = 20 # resetting stamina to max when the song starts
 
 func _check_input():
 	for note_data in notes.values():
@@ -109,16 +110,6 @@ func game_over() -> void:
 	$AudioStreamPlayer.stop()
 	$MidiPlayer.stop()
 	get_tree().change_scene_to_file("res://end_screen.tscn")
-	reset()
-	
-func reset() -> void:
-	stamina = 20
-	Combo.combo = 0
-	Combo.perfect = 0
-	Combo.good = 0
-	Combo.ok = 0
-	Highscore.displayed_points = 0
-	Highscore.points = 0
 
 func _on_timer_timeout() -> void:
 	to_results()

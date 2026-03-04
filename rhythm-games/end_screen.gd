@@ -26,5 +26,6 @@ func reset() -> void:
 	Combo.perfect = 0
 	Combo.good = 0
 	Combo.ok = 0
+	Combo.miss = 0
 	Highscore.displayed_points = 0
 	Highscore.points = 0

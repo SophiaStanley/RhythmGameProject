@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://i2vnp3satdc"]
+
+[ext_resource type="Script" uid="uid://cusgs2gps2bvb" path="res://song_select.gd" id="1_yyygw"]
+
+[node name="songselect" type="Node2D" unique_id=58974815]
+script = ExtResource("1_yyygw")
+
+[node name="Song1" type="Button" parent="." unique_id=1176472492]
+offset_left = 161.0
+offset_top = 109.0
+offset_right = 219.0
+offset_bottom = 140.0
+text = "song 1"
+
+[node name="Song2" type="Button" parent="." unique_id=750592308]
+offset_left = 160.0
+offset_top = 149.0
+offset_right = 223.0
+offset_bottom = 180.0
+text = "song 2 "
+
+[connection signal="pressed" from="Song1" to="." method="_on_song_1_pressed"]
+[connection signal="pressed" from="Song2" to="." method="_on_song_2_pressed"]

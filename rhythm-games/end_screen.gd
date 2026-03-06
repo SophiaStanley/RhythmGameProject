@@ -7,6 +7,8 @@ func _ready() -> void:
 	$Goods.text = ("great: " + str(Combo.good))
 	$OKs.text = ("OK: " + str(Combo.ok))
 	$Miss.text = ("Miss: " + str(Combo.miss))
+	$Combo.text = ("Max Combo: " + str(Combo.highest_combo))
+	$Score.text = ("Score: " + str(Highscore.points))
 	pass
 
 
@@ -27,5 +29,6 @@ func reset() -> void:
 	Combo.good = 0
 	Combo.ok = 0
 	Combo.miss = 0
+	Combo.highest_combo = 0
 	Highscore.displayed_points = 0
 	Highscore.points = 0

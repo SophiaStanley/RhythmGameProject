@@ -1129,3 +1129,7 @@ func load_from_bytes( byte_array: PackedByteArray ) -> bool:
 		self.set_soundfont( self.soundfont )
 
 	return true
+
+
+func _on_midi_player_midi_event(channel: Variant, event: Variant) -> void:
+	pass # Replace with function body.

@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://1v0dtfmnrsdm" path="res://end_screen.gd" id="1_abjgy"]
 [ext_resource type="FontFile" uid="uid://duj2mbtfmuruy" path="res://assets/upheavtt.ttf" id="1_my301"]
+[ext_resource type="Texture2D" uid="uid://0v1xwu4eugpj" path="res://assets/RestartButton.png" id="3_pmjk2"]
+[ext_resource type="Texture2D" uid="uid://d03yv75ccxhot" path="res://assets/TitleButton.png" id="4_d75mr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_abjgy"]
 font = ExtResource("1_my301")
@@ -19,14 +21,22 @@ font_size = 40
 font = ExtResource("1_my301")
 font_size = 40
 
+[sub_resource type="LabelSettings" id="LabelSettings_be1gp"]
+font = ExtResource("1_my301")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_kaxt3"]
+font = ExtResource("1_my301")
+font_size = 40
+
 [node name="end" type="Node2D" unique_id=2146831422]
 script = ExtResource("1_abjgy")
 
 [node name="Perfects" type="Label" parent="." unique_id=1572244087]
 offset_left = 62.0
-offset_top = 69.0
+offset_top = 79.0
 offset_right = 236.0
-offset_bottom = 105.0
+offset_bottom = 115.0
 text = "perfect:"
 label_settings = SubResource("LabelSettings_abjgy")
 
@@ -55,19 +65,35 @@ text = "MISS:"
 label_settings = SubResource("LabelSettings_d75mr")
 
 [node name="RestartButton" type="Button" parent="." unique_id=903351020]
-offset_left = 19.0
-offset_top = 267.0
-offset_right = 80.0
-offset_bottom = 298.0
-text = "restart"
+offset_left = 403.0
+offset_top = 201.0
+offset_right = 548.0
+offset_bottom = 244.0
+icon = ExtResource("3_pmjk2")
 
 [node name="TitleButton" type="Button" parent="." unique_id=2145815071]
-offset_left = 104.0
-offset_top = 266.0
-offset_right = 186.0
-offset_bottom = 297.0
-text = "go to title"
+offset_left = 404.0
+offset_top = 248.0
+offset_right = 549.0
+offset_bottom = 291.0
+icon = ExtResource("4_d75mr")
 
-[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
+[node name="Combo" type="Label" parent="." unique_id=589712506]
+offset_left = 62.0
+offset_top = 251.0
+offset_right = 372.0
+offset_bottom = 287.0
+text = "highest combo:"
+label_settings = SubResource("LabelSettings_be1gp")
+
+[node name="Score" type="Label" parent="." unique_id=218419751]
+offset_left = 63.0
+offset_top = 28.0
+offset_right = 191.0
+offset_bottom = 64.0
+text = "Score:"
+label_settings = SubResource("LabelSettings_kaxt3")
+
 [connection signal="pressed" from="RestartButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="TitleButton" to="." method="_on_title_button_pressed"]

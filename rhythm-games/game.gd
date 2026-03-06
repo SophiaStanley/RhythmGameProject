@@ -4,6 +4,8 @@ extends Node2D
 
 var stamina := 20
 
+var song1 = "res://assets/midi/tutorial.mid"
+var song2 = "res://assets/midi/test2.mid"
 # the time that has passed since the game scene started. used for tracking time for syncing music
 var delta_sum := 0.0
 const FALLING_SPEED_SCALE := 0.5
@@ -60,7 +62,13 @@ func _on_midi_player_midi_event(_channel: Variant, event: Variant) -> void:
 
 # Game Node
 func _ready() -> void:
+	if (Globals.song_choice == 1):
+		$MidiPlayer.file = song1
+	elif (Globals.song_choice == 2):
+		$MidiPlayer.file = song2
 	$MidiPlayer.play()
+	$Iris/Idle.play("SpriteAnimations/idle")
+	$Gwyn/GwynIdle.play("Gwyn/idle")
 
 func _process(delta: float) -> void:
 	$HUD.update_stamina(stamina)
@@ -71,12 +79,18 @@ func _process(delta: float) -> void:
 	_check_miss()
 	_check_loss()
 	
-	#checking if stamina is 0 cause otherwise it keeps playing and stopping every frame after stamina reaches 0
-	if delta_sum >= TIMING_OFFSET and not $AudioStreamPlayer.playing and stamina > 0 and $AudioStreamPlayer.is_inside_tree():
-		$AudioStreamPlayer.play()
-		stamina = 20 # resetting stamina to max when the song starts
+	if (Globals.song_choice == 1):
+		#checking if stamina is 0 cause otherwise it keeps playing and stopping every frame after stamina reaches 0
+		if delta_sum >= TIMING_OFFSET and not $AudioStreamPlayer.playing and stamina > 0 and $AudioStreamPlayer.is_inside_tree():
+			$AudioStreamPlayer.play()
+			stamina = 20 # resetting stamina to max when the song starts
+	elif (Globals.song_choice == 2):
+		if delta_sum >= TIMING_OFFSET and not $Sogn2.playing and stamina > 0 and $Sogn2.is_inside_tree():
+			$Sogn2.play()
+	
 
 func _check_input():
+		
 	for note_data in notes.values():
 		if Input.is_action_just_pressed(note_data["key"]):
 			_check_note_hit(note_data)

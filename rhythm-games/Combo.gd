@@ -2,6 +2,7 @@ extends Node2D
 
 var keepCombo = false # checking if the hit keeps the combo working, if it does then the animation plays
 var combo = 0
+var highest_combo = 0
 enum TimingJudgement {MISS, WHAT, OK, GOOD, PERFECT}
 
 var perfect := 0;
@@ -11,6 +12,8 @@ var miss := 0;
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	if (combo > highest_combo):
+		highest_combo = combo
 	pass
 	
 	

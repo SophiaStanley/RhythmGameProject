@@ -64,8 +64,10 @@ func _on_midi_player_midi_event(_channel: Variant, event: Variant) -> void:
 func _ready() -> void:
 	if (Globals.song_choice == 1):
 		$MidiPlayer.file = song1
+		$Timer.start(35.0)
 	elif (Globals.song_choice == 2):
 		$MidiPlayer.file = song2
+		$Timer.start(29.0)
 	$MidiPlayer.play()
 	$Iris/Idle.play("SpriteAnimations/idle")
 	$Gwyn/GwynIdle.play("Gwyn/idle")

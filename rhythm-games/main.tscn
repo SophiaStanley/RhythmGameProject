@@ -12,10 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://d1rob3beqvqmm" path="res://assets/sprites/IrisDefault.png" id="11_efxa6"]
 [ext_resource type="Texture2D" uid="uid://d1mjcbf5wh3et" path="res://assets/sprites/GwynDefault (1).png" id="12_dg77c"]
 [ext_resource type="AnimationLibrary" uid="uid://baonjhmnksfrw" path="res://AnimationLibrary/SpriteAnimations.res" id="12_ycdy4"]
+[ext_resource type="AnimationLibrary" uid="uid://cs28do58tsmvy" path="res://addons/Iris.res" id="13_vivmo"]
 [ext_resource type="AudioStream" uid="uid://l8pjrt3ix0ot" path="res://assets/music/Adventure's Beginning!.mp3" id="14_vivmo"]
 [ext_resource type="PackedScene" uid="uid://ch4a6a7pfdefl" path="res://hud.tscn" id="14_w48qg"]
 
-[sub_resource type="Animation" id="Animation_efxa6"]
+[sub_resource type="Animation" id="Animation_2cqfq"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -27,7 +28,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(211, 76.99999)]
+"values": [Vector2(339.99997, 65.99999)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -39,24 +40,24 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0.4, 0.4)]
+"values": [Vector2(-0.4, 0.4)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath(".:size")
+tracks/2/path = NodePath(".:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(400, 400)]
+"values": [0.0]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_dg77c"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yaehf"]
 _data = {
-&"RESET": SubResource("Animation_efxa6")
+&"RESET": SubResource("Animation_2cqfq")
 }
 
 [sub_resource type="Animation" id="Animation_ycdy4"]
@@ -85,10 +86,89 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(117, 77)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.4, 0.4)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_w48qg"]
 _data = {
 &"RESET": SubResource("Animation_ycdy4")
+}
+
+[sub_resource type="Animation" id="Animation_yaehf"]
+resource_name = "GwynSong1"
+length = 37.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2.1100001, 2.7333333, 3.1833334, 3.7133334, 4.0533333, 5.31, 6.1766667, 9.31, 10.113335, 13.093334, 15.123333, 15.393333, 18.163334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 0.21763767, 1, 6.4980173, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-20, -35), Vector2(-35, -40), Vector2(-35, -35), Vector2(-35, -40), Vector2(-35, -35), Vector2(-35, -35), Vector2(-35, -35), Vector2(-20, -35), Vector2(-20, -35), Vector2(-35, -35), Vector2(-20, -27), Vector2(-20, -27), Vector2(-20, -35)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.1100001, 13.110001, 13.376667, 14.376667, 14.643333, 16.293333, 16.643333, 16.91, 17.243334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.4, 0.4), Vector2(0.4, 0.4), Vector2(-0.4, 0.4), Vector2(-0.4, 0.4), Vector2(0.4, 0.4), Vector2(0.4, 0.4), Vector2(-0.4, 0.4), Vector2(-0.4, 0.4), Vector2(0.4, 0.4)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.1100001, 15.210001, 15.59, 15.860001, 16.27),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.16580627893946132, -0.06981317007977318, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_074og"]
+resource_name = "GwynSong2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-20, -35)]
 }
 
 [sub_resource type="Animation" id="Animation_vivmo"]
@@ -121,6 +201,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2cqfq"]
 _data = {
+&"GwynSong1": SubResource("Animation_yaehf"),
+&"GwynSong2": SubResource("Animation_074og"),
 &"idle": SubResource("Animation_vivmo")
 }
 
@@ -183,18 +265,19 @@ stream = ExtResource("11_dg77c")
 [node name="HUD" parent="Game" unique_id=1404523958 instance=ExtResource("14_w48qg")]
 
 [node name="Iris" type="TextureRect" parent="Game" unique_id=71949355]
-offset_left = 211.0
-offset_top = 76.99999
-offset_right = 611.0
-offset_bottom = 477.0
-scale = Vector2(0.4, 0.4)
+offset_left = 339.99997
+offset_top = 65.99999
+offset_right = 739.99896
+offset_bottom = 466.0
+scale = Vector2(-0.4, 0.4)
+pivot_offset = Vector2(170, 172.49998)
 size_flags_horizontal = 4
 texture = ExtResource("11_efxa6")
 expand_mode = 1
 
-[node name="Idle" type="AnimationPlayer" parent="Game/Iris" unique_id=1258421544]
-libraries/ = SubResource("AnimationLibrary_dg77c")
-libraries/SpriteAnimations = ExtResource("12_ycdy4")
+[node name="IrisAnimation" type="AnimationPlayer" parent="Game/Iris" unique_id=256148115]
+libraries/ = SubResource("AnimationLibrary_yaehf")
+libraries/Iris = ExtResource("13_vivmo")
 
 [node name="Gwyn" type="TextureRect" parent="Game" unique_id=1224312143]
 offset_left = 117.0
@@ -202,10 +285,11 @@ offset_top = 77.0
 offset_right = 517.0001
 offset_bottom = 427.00003
 scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(171.47968, 197.5)
 texture = ExtResource("12_dg77c")
 expand_mode = 1
 
-[node name="GwynIdle" type="AnimationPlayer" parent="Game/Gwyn" unique_id=321413950]
+[node name="GwynAnimation" type="AnimationPlayer" parent="Game/Gwyn" unique_id=321413950]
 libraries/ = SubResource("AnimationLibrary_w48qg")
 libraries/Gwyn = SubResource("AnimationLibrary_2cqfq")
 libraries/SpriteAnimations = ExtResource("12_ycdy4")

@@ -6,6 +6,13 @@ var stamina := 20
 
 var song1 = "res://assets/midi/tutorial.mid"
 var song2 = "res://assets/midi/test2.mid"
+
+@onready var midiPlayer = $MidiPlayer
+@onready var timer = $Timer
+@onready var hud = $HUD
+@onready var irisAnimation = $Iris/IrisAnimation
+@onready var gwynAnimation = $Gwyn/GwynAnimation
+
 # the time that has passed since the game scene started. used for tracking time for syncing music
 var delta_sum := 0.0
 const FALLING_SPEED_SCALE := 0.5
@@ -63,19 +70,21 @@ func _on_midi_player_midi_event(_channel: Variant, event: Variant) -> void:
 # Game Node
 func _ready() -> void:
 	if (Globals.song_choice == 1):
-		$MidiPlayer.file = song1
-		$Timer.start(35.0)
+		midiPlayer.file = song1
+		timer.start(35.0)
+		irisAnimation.play("Iris/Song1")
+		gwynAnimation.play("Gwyn/GwynSong1")
 	elif (Globals.song_choice == 2):
-		$MidiPlayer.file = song2
-		$Timer.start(29.0)
-	$MidiPlayer.play()
-	$Iris/Idle.play("SpriteAnimations/idle")
-	$Gwyn/GwynIdle.play("Gwyn/idle")
+		midiPlayer.file = song2
+		timer.start(29.0)
+		irisAnimation.play("Iris/Song2")
+		gwynAnimation.play("Gwyn/GwynSong2")
+	midiPlayer.play()
 
 func _process(delta: float) -> void:
-	$HUD.update_stamina(stamina)
-	$HUD.update_score(Highscore.displayed_points)
-	$HUD.update_combo(Combo.combo)
+	hud.update_stamina(stamina)
+	hud.update_score(Highscore.displayed_points)
+	hud.update_combo(Combo.combo)
 	delta_sum += delta
 	_check_input()
 	_check_miss()
@@ -124,13 +133,11 @@ func _check_loss() -> void:
 
 func game_over() -> void:
 	$AudioStreamPlayer.stop()
-	$MidiPlayer.stop()
+	midiPlayer.stop()
 	get_tree().change_scene_to_file("res://end_screen.tscn")
 
 func _on_timer_timeout() -> void:
 	to_results()
-	pass # Replace with function body.
 
 func to_results() -> void:
 	get_tree().change_scene_to_file("res://end_screen.tscn")
-	pass

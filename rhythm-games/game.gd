@@ -7,11 +7,17 @@ var stamina := 20
 var song1 = "res://assets/midi/tutorial.mid"
 var song2 = "res://assets/midi/test2.mid"
 
+# midiplayer and timer for playing and changing, hud for updating
 @onready var midiPlayer = $MidiPlayer
 @onready var timer = $Timer
 @onready var hud = $HUD
+
+# AnimationPlayers for each character
 @onready var irisAnimation = $Iris/IrisAnimation
 @onready var gwynAnimation = $Gwyn/GwynAnimation
+@onready var elodieAnimation = $Elodie/ElodieAnimation
+@onready var enidAnimation = $Enid/EnidAnimation
+@onready var aceAnimation = $Ace/AceAnimation
 
 # the time that has passed since the game scene started. used for tracking time for syncing music
 var delta_sum := 0.0
@@ -74,6 +80,9 @@ func _ready() -> void:
 		timer.start(35.0)
 		irisAnimation.play("Iris/Song1")
 		gwynAnimation.play("Gwyn/GwynSong1")
+		elodieAnimation.play("Elodie/Song1")
+		enidAnimation.play("Enid/Song1")
+		aceAnimation.play("Ace/Song1")
 	elif (Globals.song_choice == 2):
 		midiPlayer.file = song2
 		timer.start(29.0)

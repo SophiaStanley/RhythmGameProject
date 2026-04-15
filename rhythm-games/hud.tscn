@@ -1,19 +1,19 @@
 [gd_scene format=3 uid="uid://ch4a6a7pfdefl"]
 
-[ext_resource type="FontFile" uid="uid://duj2mbtfmuruy" path="res://assets/upheavtt.ttf" id="1_37p78"]
 [ext_resource type="Script" uid="uid://dauqlimg4ei6i" path="res://hud.gd" id="1_64ctp"]
+[ext_resource type="FontFile" uid="uid://c53by3yovofrf" path="res://assets/PollerOne-Regular.ttf" id="2_64ctp"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_64ctp"]
-font = ExtResource("1_37p78")
-font_size = 40
+font = ExtResource("2_64ctp")
+font_size = 35
 
 [sub_resource type="LabelSettings" id="LabelSettings_8sq4i"]
-font = ExtResource("1_37p78")
-font_size = 40
+font = ExtResource("2_64ctp")
+font_size = 35
 
 [sub_resource type="LabelSettings" id="LabelSettings_640wx"]
-font = ExtResource("1_37p78")
-font_size = 40
+font = ExtResource("2_64ctp")
+font_size = 35
 
 [sub_resource type="Animation" id="Animation_dg77c"]
 length = 0.26666668
@@ -56,10 +56,10 @@ _data = {
 script = ExtResource("1_64ctp")
 
 [node name="ScoreLabel" type="Label" parent="." unique_id=1429446203]
-offset_left = 236.0
-offset_top = 3.0
-offset_right = 294.0
-offset_bottom = 39.0
+offset_left = 212.0
+offset_top = 1.0
+offset_right = 285.0
+offset_bottom = 43.0
 text = "123"
 label_settings = SubResource("LabelSettings_64ctp")
 
@@ -72,13 +72,15 @@ text = "20"
 label_settings = SubResource("LabelSettings_8sq4i")
 
 [node name="ComboLabel" type="Label" parent="." unique_id=680670318]
-offset_left = 216.0
-offset_top = 253.0
-offset_right = 378.0
-offset_bottom = 289.0
+offset_left = 207.0
+offset_top = 234.0
+offset_right = 369.0
+offset_bottom = 321.0
 pivot_offset = Vector2(88, 21)
-text = "0 Combo"
+text = "0 
+Combo"
 label_settings = SubResource("LabelSettings_640wx")
+horizontal_alignment = 1
 
 [node name="ComboAnimation" type="AnimationPlayer" parent="ComboLabel" unique_id=1564611971]
 libraries/ = SubResource("AnimationLibrary_64ctp")

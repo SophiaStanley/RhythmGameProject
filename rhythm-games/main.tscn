@@ -120,7 +120,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(2, 2.233333, 2.5333343, 2.9666667, 3.1, 3.3000007, 3.8333335, 3.9699569, 4.162021, 4.433574, 4.7000003, 4.8526206, 5.9666667, 6.233333, 6.433334, 6.933334, 7.147571, 7.3377166, 7.983747, 8.20491, 8.501703, 8.966667, 9.966667, 10.233334, 10.533335, 10.966667, 11.1, 11.300001, 11.833334, 11.969957, 12.162022, 12.433575, 12.700001, 12.852621, 13.921881, 14.147093, 14.617092, 14.854572, 15.521879, 15.755213, 16.02188, 16.455214, 16.755213, 17.087091, 18, 18.233334, 18.533335, 18.966667, 19.1, 19.300001, 19.833334, 19.969957, 20.162022, 20.433575, 20.7, 20.852621, 21.966667, 22.233334, 22.433334, 22.933334, 23.147572, 23.337717, 23.983747, 24.20491, 24.501703, 24.966667, 25.966667, 26.233334, 26.533335, 26.966667, 27.1, 27.300001, 27.833334, 27.969957, 28.162022, 28.433575, 28.7, 28.852621, 29.92188, 30.147093, 30.617092, 30.854572, 31.52188, 31.755213, 32.02188, 32.455215, 32.75521, 33.08709),
+"times": PackedFloat32Array(2, 2.233333, 2.5333343, 2.9666667, 3.1, 3.3000007, 3.8333335, 3.9699569, 4.162021, 4.433574, 4.7000003, 4.8526206, 5.9666667, 6.233333, 6.433334, 6.933334, 7.147571, 7.3377166, 7.983747, 8.20491, 8.501703, 8.966667, 9.966667, 10.233334, 10.533335, 10.966667, 11.1, 11.300001, 11.833334, 11.969957, 12.162022, 12.433575, 12.700001, 12.852621, 13.697123, 13.922335, 14.392334, 14.629814, 15.297121, 15.530455, 15.797121, 16.230455, 16.530455, 16.862333, 18, 18.233334, 18.533335, 18.966667, 19.1, 19.300001, 19.833334, 19.969957, 20.162022, 20.433575, 20.7, 20.852621, 21.966667, 22.233334, 22.433334, 22.933334, 23.147572, 23.337717, 23.983747, 24.20491, 24.501703, 24.966667, 25.966667, 26.233334, 26.533335, 26.966667, 27.1, 27.300001, 27.833334, 27.969957, 28.162022, 28.433575, 28.7, 28.852621, 29.697123, 29.922335, 30.392334, 30.629814, 31.297121, 31.530455, 31.797121, 32.230453, 32.530457, 32.862335),
 "transitions": PackedFloat32Array(1, 0.87055045, 1.5157168, 0.8705505, 0.8705506, 1.4640857, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 6.4980173, 1, 0.87055045, 1.5157168, 0.8705505, 0.8705506, 1.4640857, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.87055045, 1.5157168, 0.8705505, 0.8705506, 1.4640857, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 6.4980173, 1, 0.87055045, 1.5157168, 0.8705505, 0.8705506, 1.4640857, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(-4, -51), Vector2(-7, -55), Vector2(-11, -51), Vector2(-11, -51), Vector2(-14, -55), Vector2(-18, -51), Vector2(-18, -51), Vector2(-21, -55), Vector2(-25, -51), Vector2(-25, -51), Vector2(-32, -55), Vector2(-32, -51), Vector2(-32, -51), Vector2(-29, -55), Vector2(-25, -51), Vector2(-25, -51), Vector2(-21, -55), Vector2(-18, -51), Vector2(-18, -51), Vector2(-15, -55), Vector2(-11, -51), Vector2(-4, -51), Vector2(-4, -51), Vector2(-7, -55), Vector2(-11, -51), Vector2(-11, -51), Vector2(-14, -55), Vector2(-18, -51), Vector2(-18, -51), Vector2(-21, -55), Vector2(-25, -51), Vector2(-25, -51), Vector2(-29, -55), Vector2(-32, -51), Vector2(-32, -51), Vector2(-16, -51), Vector2(-16, -51), Vector2(-4, -51), Vector2(-4, -51), Vector2(-4, -44), Vector2(-4, -60), Vector2(-4, -51), Vector2(-4, -51), Vector2(-4, -51), Vector2(-4, -51), Vector2(-7, -55), Vector2(-11, -51), Vector2(-11, -51), Vector2(-14, -55), Vector2(-18, -51), Vector2(-18, -51), Vector2(-21, -55), Vector2(-25, -51), Vector2(-25, -51), Vector2(-32, -55), Vector2(-32, -51), Vector2(-32, -51), Vector2(-29, -55), Vector2(-25, -51), Vector2(-25, -51), Vector2(-21, -55), Vector2(-18, -51), Vector2(-18, -51), Vector2(-15, -55), Vector2(-11, -51), Vector2(-4, -51), Vector2(-4, -51), Vector2(-7, -55), Vector2(-11, -51), Vector2(-11, -51), Vector2(-14, -55), Vector2(-18, -51), Vector2(-18, -51), Vector2(-21, -55), Vector2(-25, -51), Vector2(-25, -51), Vector2(-29, -55), Vector2(-32, -51), Vector2(-32, -51), Vector2(-16, -51), Vector2(-16, -51), Vector2(-4, -51), Vector2(-4, -51), Vector2(-4, -44), Vector2(-4, -60), Vector2(-4, -51), Vector2(-4, -51), Vector2(-4, -51)]
@@ -132,7 +132,7 @@ tracks/1/path = NodePath(".:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(13.724758, 13.958092, 14.458092, 14.724758, 15.291424, 16.374758, 16.724758, 16.991425, 17.324759, 29.724758, 29.958092, 30.458092, 30.724758, 31.291424, 32.374756, 32.724762, 32.991425, 33.32476),
+"times": PackedFloat32Array(13.5, 13.733334, 14.233334, 14.5, 15.066666, 16.15, 16.5, 16.766666, 17.1, 29.5, 29.733334, 30.233334, 30.5, 31.066666, 32.15, 32.5, 32.766666, 33.1),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(0.4, 0.4), Vector2(-0.4, 0.4), Vector2(-0.4, 0.4), Vector2(0.4, 0.4), Vector2(0.4, 0.4), Vector2(0.4, 0.4), Vector2(-0.4, 0.4), Vector2(-0.4, 0.4), Vector2(0.4, 0.4), Vector2(0.4, 0.4), Vector2(-0.4, 0.4), Vector2(-0.4, 0.4), Vector2(0.4, 0.4), Vector2(0.4, 0.4), Vector2(0.4, 0.4), Vector2(-0.4, 0.4), Vector2(-0.4, 0.4), Vector2(0.4, 0.4)]
@@ -144,7 +144,7 @@ tracks/2/path = NodePath(".:size")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 15.633333, 15.863335, 16.043335, 31.633333, 31.863335, 32.043335),
+"times": PackedFloat32Array(0, 15.408575, 15.6385765, 15.818577, 31.408575, 31.638577, 31.818577),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(400, 400), Vector2(400, 400), Vector2(399.99954, 341.93658), Vector2(400, 400), Vector2(400, 400), Vector2(399.99954, 341.93658), Vector2(400, 400)]
@@ -162,7 +162,19 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-20, -35)]
+"values": [Vector2(31, -51)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(400, 400)]
 }
 
 [sub_resource type="Animation" id="Animation_vivmo"]
@@ -385,7 +397,7 @@ z_index = 1
 script = ExtResource("7_272bh")
 metadata/_custom_type_script = "uid://bf1vnufu7na6x"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Game" unique_id=452821634]
+[node name="Song1" type="AudioStreamPlayer" parent="Game" unique_id=452821634]
 stream = ExtResource("11_dg77c")
 
 [node name="HUD" parent="Game" unique_id=1404523958 instance=ExtResource("14_w48qg")]
@@ -462,7 +474,7 @@ expand_mode = 1
 libraries/ = SubResource("AnimationLibrary_qsp4k")
 libraries/Ace = ExtResource("20_d13ii")
 
-[node name="Sogn2" type="AudioStreamPlayer" parent="Game" unique_id=660885471]
+[node name="Song2" type="AudioStreamPlayer" parent="Game" unique_id=660885471]
 stream = ExtResource("14_vivmo")
 
 [node name="Timer" type="Timer" parent="Game" unique_id=1483539373]

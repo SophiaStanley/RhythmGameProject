@@ -1,4 +1,4 @@
-# tutorial used for code:
+# tutorial used for notes falling & input code:
 # https://medium.com/@sergejmoor01/building-a-rhythm-game-in-godot-part-1-synchronizing-gameplay-with-music-258b0bcab458
 extends Node2D
 
@@ -88,6 +88,9 @@ func _ready() -> void:
 		timer.start(29.0)
 		irisAnimation.play("Iris/Song2")
 		gwynAnimation.play("Gwyn/GwynSong2")
+		elodieAnimation.play("Elodie/Song2")
+		enidAnimation.play("Enid/Song2")
+		aceAnimation.play("Ace/Song2")
 	midiPlayer.play()
 
 func _process(delta: float) -> void:
@@ -101,12 +104,12 @@ func _process(delta: float) -> void:
 	
 	if (Globals.song_choice == 1):
 		#checking if stamina is 0 cause otherwise it keeps playing and stopping every frame after stamina reaches 0
-		if delta_sum >= TIMING_OFFSET and not $AudioStreamPlayer.playing and stamina > 0 and $AudioStreamPlayer.is_inside_tree():
-			$AudioStreamPlayer.play()
+		if delta_sum >= TIMING_OFFSET and not $Song1.playing and stamina > 0 and $Song1.is_inside_tree():
+			$Song1.play()
 			stamina = 20 # resetting stamina to max when the song starts
 	elif (Globals.song_choice == 2):
-		if delta_sum >= TIMING_OFFSET and not $Sogn2.playing and stamina > 0 and $Sogn2.is_inside_tree():
-			$Sogn2.play()
+		if delta_sum >= TIMING_OFFSET and not $Song2.playing and stamina > 0 and $Song2.is_inside_tree():
+			$Song2.play()
 	
 
 func _check_input():
@@ -141,8 +144,6 @@ func _check_loss() -> void:
 		game_over()
 
 func game_over() -> void:
-	$AudioStreamPlayer.stop()
-	midiPlayer.stop()
 	get_tree().change_scene_to_file("res://end_screen.tscn")
 
 func _on_timer_timeout() -> void:

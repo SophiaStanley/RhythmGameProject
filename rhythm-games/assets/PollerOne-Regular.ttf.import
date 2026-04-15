@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://duj2mbtfmuruy"
-path="res://.godot/imported/upheavtt.ttf-ba33a0836ad9e7a241460369a660ef0f.fontdata"
+uid="uid://c53by3yovofrf"
+path="res://.godot/imported/PollerOne-Regular.ttf-f4b13ae4fd25944e267da2d984bf3db3.fontdata"
 
 [deps]
 
-source_file="res://assets/upheavtt.ttf"
-dest_files=["res://.godot/imported/upheavtt.ttf-ba33a0836ad9e7a241460369a660ef0f.fontdata"]
+source_file="res://assets/PollerOne-Regular.ttf"
+dest_files=["res://.godot/imported/PollerOne-Regular.ttf-f4b13ae4fd25944e267da2d984bf3db3.fontdata"]
 
 [params]
 
@@ -23,7 +23,7 @@ allow_system_fallback=true
 force_autohinter=false
 modulate_color_glyphs=false
 hinting=1
-subpixel_positioning=1
+subpixel_positioning=4
 keep_rounding_remainders=true
 oversampling=0.0
 Fallbacks=null

@@ -3,25 +3,21 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Perfects.text = ("perfect: " + str(Combo.perfect))
-	$Goods.text = ("great: " + str(Combo.good))
+	$Perfects.text = ("Perfect: " + str(Combo.perfect))
+	$Goods.text = ("Good: " + str(Combo.good))
 	$OKs.text = ("OK: " + str(Combo.ok))
 	$Miss.text = ("Miss: " + str(Combo.miss))
 	$Combo.text = ("Max Combo: " + str(Combo.highest_combo))
 	$Score.text = ("Score: " + str(Highscore.points))
-	pass
-
 
 func _on_title_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://title_screen.tscn")
 	reset()
-	pass # Replace with function body.
 
 
 func _on_restart_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://main.tscn")
 	reset()
-	pass # Replace with function body.
 
 func reset() -> void:
 	Combo.combo = 0

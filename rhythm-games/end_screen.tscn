@@ -1,33 +1,33 @@
 [gd_scene format=3 uid="uid://c4r8657opkxbw"]
 
 [ext_resource type="Script" uid="uid://1v0dtfmnrsdm" path="res://end_screen.gd" id="1_abjgy"]
-[ext_resource type="FontFile" uid="uid://duj2mbtfmuruy" path="res://assets/upheavtt.ttf" id="1_my301"]
+[ext_resource type="FontFile" uid="uid://c53by3yovofrf" path="res://assets/PollerOne-Regular.ttf" id="2_pmjk2"]
 [ext_resource type="Texture2D" uid="uid://0v1xwu4eugpj" path="res://assets/RestartButton.png" id="3_pmjk2"]
 [ext_resource type="Texture2D" uid="uid://d03yv75ccxhot" path="res://assets/TitleButton.png" id="4_d75mr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_abjgy"]
-font = ExtResource("1_my301")
-font_size = 40
+font = ExtResource("2_pmjk2")
+font_size = 35
 
 [sub_resource type="LabelSettings" id="LabelSettings_xu7hh"]
-font = ExtResource("1_my301")
-font_size = 40
+font = ExtResource("2_pmjk2")
+font_size = 35
 
 [sub_resource type="LabelSettings" id="LabelSettings_pmjk2"]
-font = ExtResource("1_my301")
-font_size = 40
+font = ExtResource("2_pmjk2")
+font_size = 35
 
 [sub_resource type="LabelSettings" id="LabelSettings_d75mr"]
-font = ExtResource("1_my301")
-font_size = 40
+font = ExtResource("2_pmjk2")
+font_size = 35
 
 [sub_resource type="LabelSettings" id="LabelSettings_be1gp"]
-font = ExtResource("1_my301")
-font_size = 40
+font = ExtResource("2_pmjk2")
+font_size = 35
 
 [sub_resource type="LabelSettings" id="LabelSettings_kaxt3"]
-font = ExtResource("1_my301")
-font_size = 40
+font = ExtResource("2_pmjk2")
+font_size = 35
 
 [node name="end" type="Node2D" unique_id=2146831422]
 script = ExtResource("1_abjgy")
@@ -37,7 +37,7 @@ offset_left = 62.0
 offset_top = 79.0
 offset_right = 236.0
 offset_bottom = 115.0
-text = "perfect:"
+text = "Perfect:"
 label_settings = SubResource("LabelSettings_abjgy")
 
 [node name="OKs" type="Label" parent="." unique_id=1438840383]
@@ -53,15 +53,15 @@ offset_left = 61.0
 offset_top = 120.0
 offset_right = 165.0
 offset_bottom = 156.0
-text = "GOOD:"
+text = "Good:"
 label_settings = SubResource("LabelSettings_pmjk2")
 
 [node name="Miss" type="Label" parent="." unique_id=2056032467]
-offset_left = 64.0
-offset_top = 203.0
-offset_right = 218.0
-offset_bottom = 239.0
-text = "MISS:"
+offset_left = 63.0
+offset_top = 210.0
+offset_right = 217.0
+offset_bottom = 252.0
+text = "Miss:"
 label_settings = SubResource("LabelSettings_d75mr")
 
 [node name="RestartButton" type="Button" parent="." unique_id=903351020]
@@ -83,7 +83,7 @@ offset_left = 62.0
 offset_top = 251.0
 offset_right = 372.0
 offset_bottom = 287.0
-text = "highest combo:"
+text = "Highest Combo:"
 label_settings = SubResource("LabelSettings_be1gp")
 
 [node name="Score" type="Label" parent="." unique_id=218419751]

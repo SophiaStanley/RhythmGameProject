@@ -30,6 +30,8 @@ const NOTE_Y_OFFSET := 400
 # So it should play properly.
 const NOTE_SCENE: PackedScene = preload("res://note.tscn")
 
+const FEEDBACK_SCENE = preload("res://feedback.tscn")
+
 @onready var notes: Dictionary = {
 	36: {
 		"key": "Button1",
@@ -123,6 +125,7 @@ func _check_note_hit(note_data: Dictionary) -> void:
 		var next_note: Node2D = note_data["queue"].front()
 		if next_note.test_hit(delta_sum):
 			note_data["queue"].pop_front().hit(delta_sum)
+			_spawn_note_feedback(Highscore.feedback)
 			if Combo.combo % 10 == 0 and not Combo.combo == 0:
 				stamina +=2
 		else:
@@ -138,6 +141,12 @@ func _check_miss() -> void:
 			if note_data["queue"].front().test_miss(delta_sum):
 				note_data["queue"].pop_front().miss()
 				stamina -= 2
+
+func _spawn_note_feedback(text):
+	var feedback = FEEDBACK_SCENE.instantiate();
+	feedback.change_text(text)
+	feedback.global_position = Vector2(235,200) 
+	$FeedbackContainer.add_child(feedback);
 
 func _check_loss() -> void:
 	if stamina <= 0:

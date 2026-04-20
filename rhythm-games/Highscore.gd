@@ -3,6 +3,7 @@ extends Node
 var points = 0;
 var displayed_points = 0;
 enum TimingJudgement {MISS, WHAT, OK, GOOD, PERFECT}
+var feedback = "";
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -12,14 +13,19 @@ func update_points(type: TimingJudgement):
 	match(type):
 		TimingJudgement.MISS:
 			points -= 100;
+			feedback = "Miss"
 		TimingJudgement.WHAT:
 			points -= 100;
+			feedback = "Miss"
 		TimingJudgement.OK:
 			points += 200
+			feedback = "Ok"
 		TimingJudgement.GOOD:
 			points += 500;
+			feedback = "Good"
 		TimingJudgement.PERFECT:
 			points += 1000;
+			feedback = "Perfect"
 
 func update_displayed_points() -> void:
 	var difference = abs(points - displayed_points)

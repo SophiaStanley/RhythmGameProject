@@ -481,5 +481,7 @@ stream = ExtResource("14_vivmo")
 wait_time = 35.0
 autostart = true
 
+[node name="FeedbackContainer" type="Node2D" parent="Game" unique_id=705269258]
+
 [connection signal="midi_event" from="Game/MidiPlayer" to="Game" method="_on_midi_player_midi_event"]
 [connection signal="timeout" from="Game/Timer" to="Game" method="_on_timer_timeout"]

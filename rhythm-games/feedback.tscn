@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://us3bkll574os"]
+
+[ext_resource type="Script" uid="uid://d25wl72nf4e3c" path="res://feedback.gd" id="1_3m4nc"]
+[ext_resource type="FontFile" uid="uid://c53by3yovofrf" path="res://assets/PollerOne-Regular.ttf" id="2_wbvng"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jt2bu"]
+font = ExtResource("2_wbvng")
+font_size = 20
+
+[node name="Feedback" type="Node2D" unique_id=947412101]
+script = ExtResource("1_3m4nc")
+
+[node name="Label" type="Label" parent="." unique_id=50496383]
+offset_right = 92.0
+offset_bottom = 25.0
+pivot_offset = Vector2(49, 12)
+text = "Perfect"
+label_settings = SubResource("LabelSettings_jt2bu")

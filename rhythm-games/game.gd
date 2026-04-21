@@ -32,6 +32,8 @@ const NOTE_SCENE: PackedScene = preload("res://note.tscn")
 
 const FEEDBACK_SCENE = preload("res://feedback.tscn")
 
+const PARTICLE_SCENE = preload("res://hit_particles.tscn")
+
 @onready var notes: Dictionary = {
 	36: {
 		"key": "Button1",
@@ -126,6 +128,7 @@ func _check_note_hit(note_data: Dictionary) -> void:
 		if next_note.test_hit(delta_sum):
 			note_data["queue"].pop_front().hit(delta_sum)
 			_spawn_note_feedback(Highscore.feedback)
+			_spawn_particles(note_data)
 			if Combo.combo % 10 == 0 and not Combo.combo == 0:
 				stamina +=2
 		else:
@@ -147,6 +150,13 @@ func _spawn_note_feedback(text):
 	feedback.change_text(text)
 	feedback.global_position = Vector2(235,200) 
 	$FeedbackContainer.add_child(feedback);
+
+func _spawn_particles(note_data: Dictionary):
+	var particles = PARTICLE_SCENE.instantiate();
+	
+	particles.global_position = note_data["button"].global_position + BUTTON_SPAWN_OFFSET
+	particles.emitting = true
+	$ParticleContainer.add_child(particles)
 
 func _check_loss() -> void:
 	if stamina <= 0:

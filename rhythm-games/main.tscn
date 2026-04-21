@@ -483,5 +483,7 @@ autostart = true
 
 [node name="FeedbackContainer" type="Node2D" parent="Game" unique_id=705269258]
 
+[node name="ParticleContainer" type="Node2D" parent="Game" unique_id=310626528]
+
 [connection signal="midi_event" from="Game/MidiPlayer" to="Game" method="_on_midi_player_midi_event"]
 [connection signal="timeout" from="Game/Timer" to="Game" method="_on_timer_timeout"]

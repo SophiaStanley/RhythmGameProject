@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://c15oxex83r1kn"]
+
+[ext_resource type="Script" uid="uid://cmah4hmae5j71" path="res://input_remap_button.gd" id="1_x2hje"]
+
+[node name="Settings" type="Node2D" unique_id=1992227988]
+
+[node name="InputRemapButton" type="Button" parent="." unique_id=354617202]
+offset_left = 19.0
+offset_top = 155.0
+offset_right = 94.0
+offset_bottom = 186.0
+text = "Button 1"
+script = ExtResource("1_x2hje")
+action = "Button1"
+metadata/_custom_type_script = "uid://cmah4hmae5j71"
+
+[node name="InputRemapButton2" type="Button" parent="." unique_id=591175360]
+offset_left = 152.0
+offset_top = 154.0
+offset_right = 227.0
+offset_bottom = 185.0
+text = "Button 2
+"
+script = ExtResource("1_x2hje")
+action = "Button2"
+metadata/_custom_type_script = "uid://cmah4hmae5j71"
+
+[node name="InputRemapButton3" type="Button" parent="." unique_id=1327214520]
+offset_left = 288.0
+offset_top = 156.0
+offset_right = 363.0
+offset_bottom = 187.0
+text = "Button 3"
+script = ExtResource("1_x2hje")
+action = "Button3"
+metadata/_custom_type_script = "uid://cmah4hmae5j71"
+
+[node name="InputRemapButton4" type="Button" parent="." unique_id=517988766]
+offset_left = 371.0
+offset_top = 156.0
+offset_right = 446.0
+offset_bottom = 187.0
+text = "Button 4
+"
+script = ExtResource("1_x2hje")
+action = "Button4"
+metadata/_custom_type_script = "uid://cmah4hmae5j71"
+
+[node name="BackButton" type="Button" parent="." unique_id=1857362033]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Return"
+
+[connection signal="pressed" from="BackButton" to="InputRemapButton" method="_on_back_button_pressed"]

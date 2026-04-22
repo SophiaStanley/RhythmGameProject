@@ -62,10 +62,10 @@ texture = ExtResource("2_tpml5")
 
 [node name="StartButton" type="Button" parent="." unique_id=2020910619]
 layout_mode = 0
-offset_left = 165.0
-offset_top = 261.0
-offset_right = 423.0
-offset_bottom = 304.0
+offset_left = 169.0
+offset_top = 227.0
+offset_right = 427.0
+offset_bottom = 270.0
 icon = ExtResource("3_hafda")
 
 [node name="StellarStageLogo" type="Sprite2D" parent="." unique_id=982885677]
@@ -81,4 +81,13 @@ stream = ExtResource("6_tpml5")
 autoplay = true
 parameters/looping = true
 
+[node name="SettingsButton" type="Button" parent="." unique_id=1077226794]
+layout_mode = 0
+offset_left = 267.0
+offset_top = 283.0
+offset_right = 337.0
+offset_bottom = 314.0
+text = "Settings"
+
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]

@@ -1,8 +1,28 @@
 [gd_scene format=3 uid="uid://c15oxex83r1kn"]
 
+[ext_resource type="Texture2D" uid="uid://6842vmuql0b6" path="res://assets/Backstage.png" id="1_nkug2"]
 [ext_resource type="Script" uid="uid://cmah4hmae5j71" path="res://input_remap_button.gd" id="1_x2hje"]
+[ext_resource type="Texture2D" uid="uid://23lnh542ftyg" path="res://assets/sprites/Note1.png" id="2_71mqq"]
+[ext_resource type="Texture2D" uid="uid://djmqf7rf8gxf3" path="res://assets/sprites/Note2.png" id="4_3j6r5"]
+[ext_resource type="Texture2D" uid="uid://b4nks0w4e1gk8" path="res://assets/sprites/Note3.png" id="5_3lj6o"]
+[ext_resource type="Texture2D" uid="uid://2en4pgpkmn47" path="res://assets/sprites/Note4.png" id="6_6mhpt"]
+[ext_resource type="FontFile" uid="uid://c53by3yovofrf" path="res://assets/PollerOne-Regular.ttf" id="7_3j6r5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3lj6o"]
+font = ExtResource("7_3j6r5")
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_3j6r5"]
+font = ExtResource("7_3j6r5")
+font_size = 12
 
 [node name="Settings" type="Node2D" unique_id=1992227988]
+
+[node name="Background" type="TextureRect" parent="." unique_id=864019537]
+offset_right = 588.44446
+offset_bottom = 331.0
+texture = ExtResource("1_nkug2")
+expand_mode = 1
 
 [node name="InputRemapButton" type="Button" parent="." unique_id=354617202]
 offset_left = 19.0
@@ -10,6 +30,7 @@ offset_top = 155.0
 offset_right = 94.0
 offset_bottom = 186.0
 text = "Button 1"
+icon = ExtResource("2_71mqq")
 script = ExtResource("1_x2hje")
 action = "Button1"
 metadata/_custom_type_script = "uid://cmah4hmae5j71"
@@ -21,6 +42,7 @@ offset_right = 227.0
 offset_bottom = 185.0
 text = "Button 2
 "
+icon = ExtResource("4_3j6r5")
 script = ExtResource("1_x2hje")
 action = "Button2"
 metadata/_custom_type_script = "uid://cmah4hmae5j71"
@@ -31,17 +53,19 @@ offset_top = 156.0
 offset_right = 363.0
 offset_bottom = 187.0
 text = "Button 3"
+icon = ExtResource("5_3lj6o")
 script = ExtResource("1_x2hje")
 action = "Button3"
 metadata/_custom_type_script = "uid://cmah4hmae5j71"
 
 [node name="InputRemapButton4" type="Button" parent="." unique_id=517988766]
-offset_left = 371.0
-offset_top = 156.0
-offset_right = 446.0
-offset_bottom = 187.0
+offset_left = 438.0
+offset_top = 148.0
+offset_right = 581.0
+offset_bottom = 220.0
 text = "Button 4
 "
+icon = ExtResource("6_6mhpt")
 script = ExtResource("1_x2hje")
 action = "Button4"
 metadata/_custom_type_script = "uid://cmah4hmae5j71"
@@ -50,5 +74,22 @@ metadata/_custom_type_script = "uid://cmah4hmae5j71"
 offset_right = 8.0
 offset_bottom = 8.0
 text = "Return"
+
+[node name="Title" type="Label" parent="." unique_id=2127516404]
+offset_left = 126.0
+offset_top = 11.0
+offset_right = 468.0
+offset_bottom = 36.0
+text = "Change Button Inputs Here!"
+label_settings = SubResource("LabelSettings_3lj6o")
+
+[node name="Label" type="Label" parent="." unique_id=1926641006]
+offset_left = 152.0
+offset_top = 46.0
+offset_right = 448.0
+offset_bottom = 89.0
+text = "Note: custom keybinds currently reset when you close and reopen the game."
+label_settings = SubResource("LabelSettings_3j6r5")
+autowrap_mode = 2
 
 [connection signal="pressed" from="BackButton" to="InputRemapButton" method="_on_back_button_pressed"]

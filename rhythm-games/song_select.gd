@@ -8,3 +8,7 @@ func _on_song_1_pressed() -> void:
 func _on_song_2_pressed() -> void:
 	get_tree().change_scene_to_file("res://main.tscn")
 	Globals.song_choice = 2
+
+
+func _on_return_pressed() -> void:
+	get_tree().change_scene_to_file("res://title_screen.tscn")

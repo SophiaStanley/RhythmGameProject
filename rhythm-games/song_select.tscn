@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cusgs2gps2bvb" path="res://song_select.gd" id="1_yyygw"]
 [ext_resource type="Texture2D" uid="uid://cujua0kpwh0ib" path="res://assets/SongCover/tutorial.png" id="2_1bucg"]
 [ext_resource type="Texture2D" uid="uid://bplviw80te3ml" path="res://assets/SongCover/AdventuresBeginning.png" id="2_atm5g"]
+[ext_resource type="Texture2D" uid="uid://6842vmuql0b6" path="res://assets/Backstage.png" id="2_vw5b4"]
 [ext_resource type="FontFile" uid="uid://c53by3yovofrf" path="res://assets/PollerOne-Regular.ttf" id="4_bybkm"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vw5b4"]
@@ -11,6 +12,12 @@ font_size = 35
 
 [node name="songselect" type="Node2D" unique_id=58974815]
 script = ExtResource("1_yyygw")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1725600534]
+offset_right = 576.0
+offset_bottom = 324.0
+texture = ExtResource("2_vw5b4")
+expand_mode = 1
 
 [node name="Song1" type="Button" parent="." unique_id=1176472492]
 offset_left = 94.0
@@ -34,5 +41,11 @@ offset_bottom = 52.0
 text = "Select a Song!"
 label_settings = SubResource("LabelSettings_vw5b4")
 
+[node name="Return" type="Button" parent="." unique_id=1000548791]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Return"
+
 [connection signal="pressed" from="Song1" to="." method="_on_song_1_pressed"]
 [connection signal="pressed" from="Song2" to="." method="_on_song_2_pressed"]
+[connection signal="pressed" from="Return" to="." method="_on_return_pressed"]

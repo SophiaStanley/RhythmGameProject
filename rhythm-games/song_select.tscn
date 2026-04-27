@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bplviw80te3ml" path="res://assets/SongCover/AdventuresBeginning.png" id="2_atm5g"]
 [ext_resource type="Texture2D" uid="uid://6842vmuql0b6" path="res://assets/Backstage.png" id="2_vw5b4"]
 [ext_resource type="FontFile" uid="uid://c53by3yovofrf" path="res://assets/PollerOne-Regular.ttf" id="4_bybkm"]
+[ext_resource type="Texture2D" uid="uid://6eorpgqb57ou" path="res://assets/ReturnButton.png" id="6_3wtwm"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vw5b4"]
 font = ExtResource("4_bybkm")
@@ -42,9 +43,10 @@ text = "Select a Song!"
 label_settings = SubResource("LabelSettings_vw5b4")
 
 [node name="Return" type="Button" parent="." unique_id=1000548791]
-offset_right = 8.0
-offset_bottom = 8.0
-text = "Return"
+offset_right = 109.0
+offset_bottom = 36.0
+icon = ExtResource("6_3wtwm")
+expand_icon = true
 
 [connection signal="pressed" from="Song1" to="." method="_on_song_1_pressed"]
 [connection signal="pressed" from="Song2" to="." method="_on_song_2_pressed"]

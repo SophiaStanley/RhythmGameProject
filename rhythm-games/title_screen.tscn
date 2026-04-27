@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://6h0hrx0jl8t0" path="res://assets/StellarStageLogo.png" id="3_ig5kc"]
 [ext_resource type="Texture2D" uid="uid://xm15wnxu8oib" path="res://assets/StellarStageLogo2.png" id="4_05l2w"]
 [ext_resource type="AudioStream" uid="uid://l8pjrt3ix0ot" path="res://assets/music/Adventure's Beginning!.mp3" id="6_tpml5"]
+[ext_resource type="Texture2D" uid="uid://jundl22an1te" path="res://assets/SettingsButton.png" id="7_jqemp"]
 
 [sub_resource type="Animation" id="Animation_hafda"]
 length = 0.001
@@ -83,11 +84,11 @@ parameters/looping = true
 
 [node name="SettingsButton" type="Button" parent="." unique_id=1077226794]
 layout_mode = 0
-offset_left = 267.0
-offset_top = 283.0
-offset_right = 337.0
-offset_bottom = 314.0
-text = "Settings"
+offset_left = 170.0
+offset_top = 273.0
+offset_right = 428.0
+offset_bottom = 316.0
+icon = ExtResource("7_jqemp")
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]

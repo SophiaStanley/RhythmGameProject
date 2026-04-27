@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b4nks0w4e1gk8" path="res://assets/sprites/Note3.png" id="5_3lj6o"]
 [ext_resource type="Texture2D" uid="uid://2en4pgpkmn47" path="res://assets/sprites/Note4.png" id="6_6mhpt"]
 [ext_resource type="FontFile" uid="uid://c53by3yovofrf" path="res://assets/PollerOne-Regular.ttf" id="7_3j6r5"]
+[ext_resource type="Texture2D" uid="uid://6eorpgqb57ou" path="res://assets/ReturnButton.png" id="7_3lj6o"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3lj6o"]
 font = ExtResource("7_3j6r5")
@@ -71,9 +72,10 @@ action = "Button4"
 metadata/_custom_type_script = "uid://cmah4hmae5j71"
 
 [node name="BackButton" type="Button" parent="." unique_id=1857362033]
-offset_right = 8.0
-offset_bottom = 8.0
-text = "Return"
+offset_right = 108.0
+offset_bottom = 35.0
+icon = ExtResource("7_3lj6o")
+expand_icon = true
 
 [node name="Title" type="Label" parent="." unique_id=2127516404]
 offset_left = 126.0

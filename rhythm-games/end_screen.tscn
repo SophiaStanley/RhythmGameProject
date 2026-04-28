@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c4r8657opkxbw"]
 
 [ext_resource type="Script" uid="uid://1v0dtfmnrsdm" path="res://end_screen.gd" id="1_abjgy"]
+[ext_resource type="Texture2D" uid="uid://dqhep1lrh3gkn" path="res://assets/ResultsBackground.png" id="2_d75mr"]
 [ext_resource type="FontFile" uid="uid://c53by3yovofrf" path="res://assets/PollerOne-Regular.ttf" id="2_pmjk2"]
 [ext_resource type="Texture2D" uid="uid://0v1xwu4eugpj" path="res://assets/RestartButton.png" id="3_pmjk2"]
 [ext_resource type="Texture2D" uid="uid://d03yv75ccxhot" path="res://assets/TitleButton.png" id="4_d75mr"]
@@ -31,6 +32,12 @@ font_size = 35
 
 [node name="end" type="Node2D" unique_id=2146831422]
 script = ExtResource("1_abjgy")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2057740803]
+offset_right = 608.0
+offset_bottom = 342.0
+texture = ExtResource("2_d75mr")
+expand_mode = 1
 
 [node name="Perfects" type="Label" parent="." unique_id=1572244087]
 offset_left = 62.0
@@ -94,6 +101,6 @@ offset_bottom = 64.0
 text = "Score:"
 label_settings = SubResource("LabelSettings_kaxt3")
 
-[connection signal="pressed" from="RestartButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="RestartButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="TitleButton" to="." method="_on_title_button_pressed"]

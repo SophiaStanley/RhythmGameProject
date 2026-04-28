@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://d1mjcbf5wh3et" path="res://assets/sprites/GwynDefault (1).png" id="12_dg77c"]
 [ext_resource type="AnimationLibrary" uid="uid://baonjhmnksfrw" path="res://AnimationLibrary/SpriteAnimations.res" id="12_ycdy4"]
 [ext_resource type="AnimationLibrary" uid="uid://cs28do58tsmvy" path="res://addons/Iris.res" id="13_vivmo"]
+[ext_resource type="Texture2D" uid="uid://di6c0qvuuic2e" path="res://assets/sprites/GwynHappy.png" id="14_ryguw"]
 [ext_resource type="AudioStream" uid="uid://l8pjrt3ix0ot" path="res://assets/music/Adventure's Beginning!.mp3" id="14_vivmo"]
 [ext_resource type="PackedScene" uid="uid://ch4a6a7pfdefl" path="res://hud.tscn" id="14_w48qg"]
 [ext_resource type="Texture2D" uid="uid://cbdnhmiok5vf1" path="res://assets/sprites/ElodieDefault.png" id="15_2cqfq"]
@@ -60,6 +61,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector2(399.99954, 341.93658)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("11_efxa6")]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yaehf"]
 _data = {
@@ -103,6 +116,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0.4, 0.4)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("12_dg77c")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_w48qg"]
@@ -149,6 +174,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector2(400, 400), Vector2(400, 400), Vector2(399.99954, 341.93658), Vector2(400, 400), Vector2(400, 400), Vector2(399.99954, 341.93658), Vector2(400, 400)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(13.5, 13.6213665, 16.150002, 16.321365, 29.5, 29.621367, 32.15, 32.321365),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("12_dg77c"), ExtResource("14_ryguw"), ExtResource("14_ryguw"), ExtResource("12_dg77c"), ExtResource("12_dg77c"), ExtResource("14_ryguw"), ExtResource("14_ryguw"), ExtResource("12_dg77c")]
+}
 
 [sub_resource type="Animation" id="Animation_074og"]
 resource_name = "GwynSong2"
@@ -188,6 +225,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(0.4, 0.4), Vector2(0.4, 0.4), Vector2(-0.4, 0.4), Vector2(-0.4, 0.4), Vector2(0.4, 0.4), Vector2(0.4, 0.4), Vector2(-0.4, 0.4), Vector2(-0.4, 0.4), Vector2(0.4, 0.4), Vector2(0.4, 0.4), Vector2(-0.4, 0.4), Vector2(-0.4, 0.4), Vector2(0.4, 0.4)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(8.2, 8.3, 14.5, 14.6, 19.4, 19.5, 21, 21.1, 26, 26.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("12_dg77c"), ExtResource("14_ryguw"), ExtResource("14_ryguw"), ExtResource("12_dg77c"), ExtResource("12_dg77c"), ExtResource("14_ryguw"), ExtResource("14_ryguw"), ExtResource("12_dg77c"), ExtResource("12_dg77c"), ExtResource("14_ryguw")]
 }
 
 [sub_resource type="Animation" id="Animation_vivmo"]
@@ -263,6 +312,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector2(0.4, 0.4)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("15_2cqfq")]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0odxb"]
 _data = {
@@ -307,6 +368,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector2(0.4, 0.4)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("16_074og")]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a6jrf"]
 _data = {
@@ -350,6 +423,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(400, 400)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("17_cegan")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qsp4k"]
